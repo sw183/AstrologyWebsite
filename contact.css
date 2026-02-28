@@ -1,0 +1,169 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= CINEMATIC GALAXY BACKGROUND ================= */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: white;
+
+    /* Nebula + deep space */
+    background:
+        radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.25), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.25), transparent 40%),
+        radial-gradient(circle at 50% 50%, #1e1b4b, #0f0c29 60%, #000000);
+}
+
+/* ================= STAR LAYERS ================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 2px, transparent 2px),
+        radial-gradient(rgba(255,255,255,0.8) 1.5px, transparent 1.5px);
+
+    background-size:
+        40px 40px,
+        80px 80px,
+        120px 120px;
+
+    background-position:
+        0 0,
+        20px 40px,
+        60px 20px;
+
+    opacity: 0.6;
+    animation: twinkle 6s infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Twinkle effect */
+@keyframes twinkle {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.75; }
+    100% { opacity: 0.5; }
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #c084fc;
+}
+
+/* ================= MAIN SECTION ================= */
+.contact-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= CONTACT BOX ================= */
+.contact-box {
+    width: 500px;
+    max-width: 95%;
+    padding: 50px;
+    text-align: center;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 40px rgba(168, 85, 247, 0.4),
+        0 0 80px rgba(59, 130, 246, 0.2);
+
+    transition: transform 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: scale(1.02);
+}
+
+.contact-box h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.contact-box p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ================= FORM ================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.contact-form button {
+    background: #7c3aed;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #9333ea;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 1;
+}
