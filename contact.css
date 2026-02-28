@@ -1,0 +1,67 @@
+/* ================= ABOUT / CONTACT ================= */
+
+.about-contact-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.about-box {
+    background-color: #5a4e9b; /* matches your purple Figma */
+    color: white;
+    padding: 40px;
+    width: 500px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.about-box h2,
+.about-box h3 {
+    margin-top: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ddd;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
