@@ -1,0 +1,161 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    color:white;
+    background:#020617;
+}
+
+
+/* ================= STAR BACKGROUND ================= */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+    background-size:40px 40px;
+    opacity:0.2;
+    z-index:-1;
+}
+
+
+/* ================= NAVBAR ================= */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#0b1a35;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#60a5fa;
+}
+
+
+/* ================= HERO ================= */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-weight:normal;
+    margin-bottom:20px;
+    color:#93c5fd;
+}
+
+.hero-text{
+    line-height:1.6;
+}
+
+
+/* ================= HOROSCOPE ================= */
+.horoscope-section{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.horoscope-form{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+input, select, button{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.horoscope-result{
+    margin-top:20px;
+    font-style:italic;
+}
+
+
+/* ================= CATEGORY CARDS ================= */
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:60px 40px;
+}
+
+.card{
+    background:#0b1a35;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+
+/* ================= INFO ================= */
+.info{
+    text-align:center;
+    padding:40px;
+    max-width:800px;
+    margin:auto;
+    opacity:0.9;
+}
