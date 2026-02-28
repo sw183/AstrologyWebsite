@@ -9,14 +9,25 @@ body{
     font-family: Arial, sans-serif;
     color: white;
 
-    background-color: #0f172a;
+    background-color: #0b1120;
 
     background-image:
-        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.8), transparent),
-        radial-gradient(1.5px 1.5px at 70% 80%, rgba(255,255,255,0.6), transparent),
-        radial-gradient(1px 1px at 40% 60%, rgba(255,255,255,0.5), transparent);
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1.5px 1.5px at 30% 70%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 80% 40%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(2px 2px at 90% 10%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1.5px 1.5px at 70% 85%, rgba(255,255,255,0.6), transparent);
 
-    background-size: 200px 200px, 250px 250px, 300px 300px;
+    background-size:
+        200px 200px,
+        300px 300px,
+        250px 250px,
+        180px 180px,
+        320px 320px,
+        275px 275px;
+
+    background-repeat: repeat;
 }
 
 /* ================= CONTAINER (CONSISTENT WIDTH) ================= */
