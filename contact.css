@@ -1,11 +1,13 @@
-/* ================= GALAXY BACKGROUND ================= */
+/* ================= BODY RESET ================= */
 
 body {
-    background: radial-gradient(circle at top left, #1e1b4b, #0f0c29 60%, #000000);
-    color: white;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
 }
 
-/* Soft glowing stars */
+/* ================= GALAXY BACKGROUND ================= */
+
 body::before {
     content: "";
     position: fixed;
@@ -15,8 +17,8 @@ body::before {
     background-size: 50px 50px;
     opacity: 0.15;
     z-index: -1;
+    pointer-events: none;
 }
-
 /* ================= CONTACT SECTION ================= */
 
 .contact-section {
