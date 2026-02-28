@@ -1,0 +1,106 @@
+/* ================= GENERAL PAGE STYLING ================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: black;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* ================= PAGE HEADER ================= */
+
+.planet-header {
+    padding: 40px 20px;
+}
+
+.planet-header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* ================= GRID LAYOUT ================= */
+
+.house-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px 40px 60px 40px;
+}
+
+/* ================= CARD STYLING ================= */
+
+.house-card {
+    padding: 25px 20px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+}
+
+.house-card img {
+    width: 80px;
+    margin: 0 auto 15px auto;
+}
+
+.house-card h3 {
+    margin-bottom: 10px;
+}
+
+.house-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ================= HOUSE COLORS ================= */
+
+.house1  { background-color: #ff6b6b; }
+.house2  { background-color: #ff922b; }
+.house3  { background-color: #ffd43b; color: black; }
+.house4  { background-color: #69db7c; }
+.house5  { background-color: #38d9a9; }
+.house6  { background-color: #4dabf7; }
+.house7  { background-color: #748ffc; }
+.house8  { background-color: #9775fa; }
+.house9  { background-color: #da77f2; }
+.house10 { background-color: #f06595; }
+.house11 { background-color: #adb5bd; color: black; }
+.house12 { background-color: #b50505; }
