@@ -48,8 +48,8 @@ body {
     font-size: 36px;
 }
 
-.header-img {
-    width: 80px;
+.planet-header .header-img {
+    width: 200px;
     height: auto;
 }
 
