@@ -1,0 +1,46 @@
+/* ================= CLEAN WHITE BACKGROUND ================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.about-header {
+    padding: 120px 20px 40px 20px; /* space for fixed navbar */
+    text-align: center;
+}
+
+.about-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* ================= CONTENT SECTION ================= */
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 80px 20px;
+}
+
+.about-content {
+    max-width: 800px;
+    line-height: 1.8;
+    font-size: 17px;
+    color: #333;
+}
+
+.about-content h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
