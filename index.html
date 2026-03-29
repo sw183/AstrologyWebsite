@@ -1,117 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Astrology Site</title>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-    font-family:Arial,sans-serif;
-    color:white;
-    overflow-x:hidden;
-    background-color:#050a18;
-    background-image:
-        radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.6), transparent),
-        radial-gradient(1px 1px at 50px 80px, rgba(255,255,255,0.5), transparent),
-        radial-gradient(1px 1px at 130px 40px, rgba(255,255,255,0.6), transparent),
-        radial-gradient(1px 1px at 170px 120px, rgba(255,255,255,0.5), transparent),
-        radial-gradient(2px 2px at 90px 60px, rgba(255,255,255,0.8), transparent),
-        radial-gradient(2px 2px at 200px 150px, rgba(255,255,255,0.7), transparent),
-        radial-gradient(3px 3px at 300px 100px, rgba(255,255,255,0.95), transparent),
-        radial-gradient(3px 3px at 400px 200px, rgba(255,255,255,0.9), transparent);
-    background-size:350px 350px;
-}
-
-img{max-width:100%;height:auto;}
-
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:rgba(11,26,53,0.9);
-    flex-wrap:wrap;
-}
-
-.logo{font-size:1.4rem;font-weight:bold;}
-
-.menu-toggle{display:none;font-size:1.8rem;cursor:pointer;}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:30px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-}
-
-.hero{
-    text-align:center;
-    padding:100px 20px;
-    max-width:900px;
-    margin:auto;
-}
-
-.hero h1{font-size:3rem;margin-bottom:15px;}
-.subtitle{color:#93c5fd;margin-bottom:25px;}
-.hero-text{margin-bottom:15px;opacity:0.9;}
-
-.horoscope-section{padding:80px 20px;text-align:center;}
-
-.horoscope-form{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-input,select,button{
-    padding:12px;
-    border:none;
-    border-radius:6px;
-}
-
-button{background:#2563eb;color:white;cursor:pointer;}
-
-.categories-section{padding:80px 20px;text-align:center;}
-
-.categories{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:#0b1a35;
-    padding:30px;
-    border-radius:14px;
-}
-
-.btn{display:inline-block;margin-top:15px;padding:10px;background:#2563eb;color:white;text-decoration:none;}
-
-@media (max-width:768px){
-    .menu-toggle{display:block;}
-    .nav-links{display:none;flex-direction:column;width:100%;}
-    .nav-links.active{display:flex;}
-    .hero h1{font-size:2rem;}
-}
-
-@media (max-width:480px){
-    .hero h1{font-size:1.6rem;}
-    input,select,button{width:100%;}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology Site</title>
+    <link rel="stylesheet" href="homepagestyle.css">
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div
+    <div class="logo">Astrology Site</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Celestial Guide</h1>
+    <h2 class="subtitle">Discover the cosmos within you</h2>
+    <p class="hero-text">
+        Explore astrology and uncover your destiny.
+    </p>
+</header>
+
+<section class="horoscope-section">
+    <h2>Daily Horoscope Generator</h2>
+
+    <form class="horoscope-form" id="horoscope-form">
+        <input type="date" id="birthdate" required>
+
+        <select id="zodiac" required>
+            <option value="">Select Zodiac Sign</option>
+            <option>Aries</option>
+            <option>Taurus</option>
+            <option>Gemini</option>
+            <option>Cancer</option>
+            <option>Leo</option>
+            <option>Virgo</option>
+            <option>Libra</option>
+            <option>Scorpio</option>
+            <option>Sagittarius</option>
+            <option>Capricorn</option>
+            <option>Aquarius</option>
+            <option>Pisces</option>
+        </select>
+
+        <button type="submit">Generate Horoscope</button>
+    </form>
+
+    <div class="horoscope-result" id="result">
+        Your horoscope will appear here...
+    </div>
+</section>
+
+<section class="categories-section">
+    <h2 class="section-title">Explore Astrology Topics</h2>
+
+    <div class="categories">
+        <div class="card">
+            <h3>12 Zodiac Signs</h3>
+            <p>Dive deep into the unique traits and characteristics of each astrological sign.</p>
+            <a href="signs.html" class="btn">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h3>Planets</h3>
+            <p>Understand the influence and meaning of each planet in your astrological chart.</p>
+            <a href="planets.html" class="btn">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h3>Houses</h3>
+            <p>Explore the twelve houses of astrology and their impact on different life areas.</p>
+            <a href="houses.html" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script>
+// MENU TOGGLE
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// HOROSCOPE GENERATOR
+const form = document.getElementById("horoscope-form");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const zodiac = document.getElementById("zodiac").value;
+
+    const messages = {
+        Aries: "Today is a great day to take initiative.",
+        Taurus: "Focus on stability and comfort today.",
+        Gemini: "Communication will open new doors.",
+        Cancer: "Trust your emotions and intuition.",
+        Leo: "Shine bright and lead with confidence.",
+        Virgo: "Attention to detail will pay off.",
+        Libra: "Seek balance in your decisions.",
+        Scorpio: "Embrace transformation and growth.",
+        Sagittarius: "Adventure is calling you today.",
+        Capricorn: "Hard work will bring success.",
+        Aquarius: "Innovation will guide you forward.",
+        Pisces: "Creativity and dreams are strong today."
+    };
+
+    result.textContent = messages[zodiac] || "Please select a zodiac sign.";
+});
+</script>
+
+</body>
+</html>
 
