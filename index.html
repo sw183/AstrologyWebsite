@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrology Site</title>
-    <link rel="stylesheet" href="homepagestyle.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astrology Site</title>
+<link rel="stylesheet" href="homepagestyle.css">
 </head>
-
 <body>
 
 <nav class="navbar">
@@ -32,7 +31,6 @@
 
     <form class="horoscope-form" id="horoscope-form">
         <input type="date" id="birthdate" required>
-
         <select id="zodiac" required>
             <option value="">Select Zodiac Sign</option>
             <option>Aries</option>
@@ -48,7 +46,6 @@
             <option>Aquarius</option>
             <option>Pisces</option>
         </select>
-
         <button type="submit">Generate Horoscope</button>
     </form>
 
@@ -90,7 +87,7 @@ toggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
-// HOROSCOPE GENERATOR
+// HOROSCOPE GENERATOR WITH FADE
 const form = document.getElementById("horoscope-form");
 const result = document.getElementById("result");
 
@@ -114,10 +111,13 @@ form.addEventListener("submit", function(e){
         Pisces: "Creativity and dreams are strong today."
     };
 
-    result.textContent = messages[zodiac] || "Please select a zodiac sign.";
+    result.classList.add('fade'); // fade out
+    setTimeout(() => {
+        result.textContent = messages[zodiac] || "Please select a zodiac sign.";
+        result.classList.remove('fade'); // fade in
+    }, 200);
 });
 </script>
 
 </body>
 </html>
-
