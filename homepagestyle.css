@@ -130,6 +130,11 @@ button:hover{
     margin-top:25px;
     font-style:italic;
     opacity:0.85;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.horoscope-result.fade{
+    opacity:0;
 }
 
 /* ================= CATEGORY SECTION ================= */
@@ -187,15 +192,6 @@ button:hover{
 .btn:hover{
     background:#1d4ed8;
     transform:scale(1.05);
-}
-
-/* ================= INFO SECTION ================= */
-.info{
-    text-align:center;
-    padding:60px 20px;
-    max-width:900px;
-    margin:auto;
-    opacity:0.9;
 }
 
 /* ================= RESPONSIVE ================= */
