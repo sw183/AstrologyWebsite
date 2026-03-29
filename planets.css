@@ -1,88 +1,145 @@
-/* ===== GENERAL PAGE STYLE ===== */
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ===== NAVIGATION BAR ===== */
-.navbar {
-    background-color: #111;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
+body{
+    font-family: Arial, sans-serif;
+    color:white;
+    background-color:#050a18;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
+img{
+    max-width:100%;
+    height:auto;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+/* ================= NAVBAR ================= */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(11,26,53,0.9);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(6px);
+    flex-wrap:wrap;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
+.logo{
+    font-size:1.4rem;
+    font-weight:bold;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
+.menu-toggle{
+    display:none;
+    font-size:1.8rem;
+    cursor:pointer;
 }
 
-/* ===== HEADER ===== */
-.planet-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 30px 0;
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
 }
 
-.planet-header h1 {
-    font-size: 36px;
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s ease;
 }
 
-.planet-header .header-img {
-    width: 200px;
-    height: auto;
+.nav-links a:hover{
+    color:#60a5fa;
 }
 
-
-/* ===== SECTION TITLE ===== */
-.section-title {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 28px;
+/* ================= HEADER ================= */
+.planet-header{
+    text-align:center;
+    padding:50px 20px;
 }
 
-/* ===== PLANET GRID ===== */
-.planet-grid {
-    padding: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+.planet-header h1{
+    font-size:2.5rem;
+    margin:20px 0;
 }
 
-/* ===== PLANET CARD ===== */
-.planet-card {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+/* ================= PLANET GRID ================= */
+.planet-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:30px;
+    padding:40px 20px;
+    max-width:1200px;
+    margin:0 auto;
 }
 
-.planet-card img {
-    width: 60px;
-    margin-bottom: 10px;
+.planet-card{
+    background:#0b1a35;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.planet-card h3 {
-    margin: 10px 0;
-    margin-bottom: 15px;
+.planet-card h3{
+    margin:15px 0 10px;
+}
+
+.planet-card p{
+    opacity:0.85;
+    margin-bottom:8px;
+}
+
+.planet-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:900px){
+    .navbar{
+        flex-direction:column;
+        gap:10px;
+        padding:15px 20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .planet-header h1{
+        font-size:2rem;
+    }
+}
+
+@media (max-width:480px){
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .planet-header h1{
+        font-size:1.5rem;
+    }
+
+    .planet-card{
+        padding:15px;
+    }
 }
