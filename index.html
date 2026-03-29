@@ -4,12 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astrology Site</title>
-    <link rel="stylesheet" href="homepagestyle.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #111;
+            color: #fff;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .hero-text {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        /* FORM */
+        .horoscope-section {
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .horoscope-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 1rem auto;
+        }
+
+        input, select, button {
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #111;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .horoscope-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f4f4f4;
+        }
+
+        /* CARDS */
+        .categories-section {
+            padding: 2rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #111;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            input, select, button {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
 <nav class="navbar">
     <div class="logo">Astrology Site</div>
 
@@ -20,34 +200,21 @@
     </ul>
 </nav>
 
-
-<!-- ================= HERO SECTION ================= -->
 <header class="hero">
-
     <h1>Celestial Guide</h1>
-
     <h2 class="subtitle">Discover the cosmos within you</h2>
 
     <p class="hero-text">
         Astrology is an ancient practice that studies the movements and positions 
-        of celestial objects as a means for divining information about human affairs 
-        and terrestrial events. Its a profound tool for self-discovery and understanding 
-        the intricate dance between the universe and our individual lives.
+        of celestial objects as a means for divining information about human affairs.
     </p>
 
     <p class="hero-text">
-        Explore the various facets of astrology — from the characteristics of the twelve 
-        zodiac signs to the influence of planets and the significance of houses in your 
-        birth chart. Unravel the mysteries of your personality and life path through the 
-        wisdom of the stars.
+        Explore zodiac signs, planets, and houses to better understand your life path.
     </p>
-
 </header>
 
-
-<!-- ================= HOROSCOPE GENERATOR ================= -->
 <section class="horoscope-section">
-
     <h2>Daily Horoscope Generator</h2>
 
     <form class="horoscope-form">
@@ -75,37 +242,32 @@
     <div class="horoscope-result">
         Your horoscope will appear here...
     </div>
-
 </section>
 
-<!-- ================= CATEGORY CARDS ================= -->
 <section class="categories-section">
-
     <h2 class="section-title">Explore Astrology Topics</h2>
 
     <div class="categories">
         <div class="card">
             <h3>12 Zodiac Signs</h3>
-            <p>Dive deep into the unique traits and characteristics of each astrological sign.</p>
+            <p>Explore each sign’s traits.</p>
             <a href="signs.html" class="btn">Learn More</a>
         </div>
 
         <div class="card">
-    <h3>Planets</h3>
-    <p>Understand the influence and meaning of each planet in your astrological chart.</p>
-    <a href="planets.html" class="btn">Learn More</a>
-</div>
+            <h3>Planets</h3>
+            <p>Understand planetary influence.</p>
+            <a href="planets.html" class="btn">Learn More</a>
+        </div>
 
         <div class="card">
             <h3>Houses</h3>
-            <p>Explore the twelve houses of astrology and their impact on different life areas.</p>
+            <p>Discover life areas in astrology.</p>
             <a href="houses.html" class="btn">Learn More</a>
         </div>
     </div>
-
-</section>
-
 </section>
 
 </body>
 </html>
+
