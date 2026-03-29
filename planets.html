@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Planets</title>
-    <link rel="stylesheet" href="planets.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Planets</title>
+<link rel="stylesheet" href="planets.css">
 </head>
 
 <body>
@@ -12,29 +12,24 @@
 <!-- ================= NAVIGATION ================= -->
 <nav class="navbar">
     <div class="logo">Astrology Site</div>
-    <ul class="nav-links">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
     </ul>
 </nav>
 
-
 <!-- ================= PAGE HEADER ================= -->
 <header class="planet-header">
-
-<img src="images/solar-system.png" class="header-img" alt="Solar system background image">
-
-<h1>The Planets</h1>
-
-<img src="images/earth.png" class="header-img" alt="Earth astrological background image">
-    
+    <img src="images/solar-system.png" class="header-img" alt="Solar system background image">
+    <h1>The Planets</h1>
+    <img src="images/earth.png" class="header-img" alt="Earth astrological background image">
 </header>
-
 
 <!-- ================= PLANET CARDS ================= -->
 <section class="planet-grid">
-    
+
     <div class="planet-card">
         <img src="images/sun.png" alt="Symbol of the Sun">
         <h3>Sun</h3>
@@ -106,6 +101,16 @@
     </div>
 
 </section>
+
+<script>
+// MOBILE MENU TOGGLE
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
 
 </body>
 </html>
