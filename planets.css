@@ -7,8 +7,8 @@
 
 body{
     font-family: Arial, sans-serif;
-    color:white;
-    background-color:#050a18;
+    color:#111; /* dark text for readability on white */
+    background-color:white; /* page background */
 }
 
 img{
@@ -22,8 +22,8 @@ img{
     justify-content:space-between;
     align-items:center;
     padding:20px 60px;
-    background:rgba(11,26,53,0.9);
-    border-bottom:1px solid rgba(255,255,255,0.1);
+    background:rgba(245,245,245,0.95); /* light navbar */
+    border-bottom:1px solid rgba(0,0,0,0.1);
     backdrop-filter:blur(6px);
     flex-wrap:wrap;
 }
@@ -31,12 +31,14 @@ img{
 .logo{
     font-size:1.4rem;
     font-weight:bold;
+    color:#111; /* dark text */
 }
 
 .menu-toggle{
     display:none;
     font-size:1.8rem;
     cursor:pointer;
+    color:#111;
 }
 
 .nav-links{
@@ -47,13 +49,13 @@ img{
 
 .nav-links a{
     text-decoration:none;
-    color:white;
+    color:#111;
     font-weight:600;
     transition:0.3s ease;
 }
 
 .nav-links a:hover{
-    color:#60a5fa;
+    color:#2563eb; /* subtle blue highlight */
 }
 
 /* ================= HEADER ================= */
@@ -65,6 +67,7 @@ img{
 .planet-header h1{
     font-size:2.5rem;
     margin:20px 0;
+    color:#111;
 }
 
 /* ================= PLANET GRID ================= */
@@ -78,12 +81,13 @@ img{
 }
 
 .planet-card{
-    background:#0b1a35;
+    background:#f5f5f5; /* light card background */
     border-radius:12px;
     padding:20px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color:#111; /* dark text */
 }
 
 .planet-card h3{
@@ -97,7 +101,7 @@ img{
 
 .planet-card:hover{
     transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* ================= RESPONSIVE ================= */
