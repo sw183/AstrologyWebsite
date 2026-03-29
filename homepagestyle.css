@@ -8,21 +8,17 @@
 body{
     font-family: Arial, sans-serif;
     color: white;
+    overflow-x: hidden;
 
     background-color: #050a18;
 
     background-image:
-        /* tiny stars */
         radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.6), transparent),
         radial-gradient(1px 1px at 50px 80px, rgba(255,255,255,0.5), transparent),
         radial-gradient(1px 1px at 130px 40px, rgba(255,255,255,0.6), transparent),
         radial-gradient(1px 1px at 170px 120px, rgba(255,255,255,0.5), transparent),
-
-        /* medium stars */
         radial-gradient(2px 2px at 90px 60px, rgba(255,255,255,0.8), transparent),
         radial-gradient(2px 2px at 200px 150px, rgba(255,255,255,0.7), transparent),
-
-        /* big bright stars */
         radial-gradient(3px 3px at 300px 100px, rgba(255,255,255,0.95), transparent),
         radial-gradient(3px 3px at 400px 200px, rgba(255,255,255,0.9), transparent);
 
@@ -30,7 +26,12 @@ body{
     background-repeat: repeat;
 }
 
-/* ================= CONTAINER (CONSISTENT WIDTH) ================= */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* ================= CONTAINER ================= */
 .container{
     max-width:1100px;
     margin:0 auto;
@@ -46,6 +47,7 @@ body{
     background:rgba(11, 26, 53, 0.9);
     border-bottom:1px solid rgba(255,255,255,0.1);
     backdrop-filter:blur(6px);
+    flex-wrap:wrap;
 }
 
 .logo{
@@ -200,21 +202,80 @@ button:hover{
     opacity:0.9;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width:900px){
+/* ================= TABLET ================= */
+@media (max-width: 768px){
 
     .navbar{
         flex-direction:column;
         gap:15px;
+        padding:15px 20px;
+    }
+
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        padding:70px 15px;
     }
 
     .hero h1{
-        font-size:2.3rem;
+        font-size:2rem;
+    }
+
+    .subtitle{
+        font-size:1.1rem;
+    }
+
+    .section-title{
+        font-size:1.5rem;
     }
 
     .horoscope-form{
         flex-direction:column;
         align-items:center;
     }
+}
 
+/* ================= MOBILE ================= */
+@media (max-width: 480px){
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+
+    .nav-links a{
+        padding:10px;
+        width:100%;
+        text-align:center;
+    }
+
+    .hero{
+        padding:50px 10px;
+    }
+
+    .hero h1{
+        font-size:1.7rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .hero-text{
+        font-size:0.95rem;
+    }
+
+    input, select, button{
+        width:100%;
+        font-size:1rem;
+    }
+
+    .card{
+        padding:20px;
+    }
 }
