@@ -2,43 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact | Celestial Guide</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cosmos</title>
+    <link rel="stylesheet" href="contact.css"> <!-- your updated CSS file -->
 </head>
 <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-logo">Cosmos</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">More</a>
+                <ul class="dropdown-content">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">Celestial Guide</div>
-    <ul class="nav-links">
-        <li class="dropdown">
-            <a href="javascript:void(0)">Menu &#9662;</a>
-            <ul class="dropdown-content">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="planets.html">Planets</a></li>
-                <li><a href="houses.html">Houses</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="contact-section">
+        <!-- Main heading -->
+        <h1>Contact</h1>
 
-<!-- HEADER -->
-<section class="contact-header">
-    <h1>Have questions about the cosmos? Send us a message below.</h1>
-</section>
+        <!-- Mini Cosmos subheading aligned with form -->
+        <h2>Have a message about the cosmos? Send us a message below.</h2>
 
-<!-- CONTACT FORM -->
-<section class="contact-section">
-    <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="8" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+        <!-- Contact form -->
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
+    <!-- Optional footer -->
+    <footer style="text-align:center; padding:20px; background:#000; color:#fff;">
+        &copy; 2026 Cosmos. All rights reserved.
+    </footer>
 </body>
 </html>
