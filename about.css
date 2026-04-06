@@ -5,6 +5,7 @@ body {
     background-color: #ffffff;
     color: #222;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 /* ================= NAVBAR ================= */
@@ -15,8 +16,8 @@ body {
     padding: 20px 60px;
     background-color: #000; /* solid black background */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-sizing: border-box; /* include padding in width calculations */
-    width: 100%;            /* make sure it fits the viewport */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -44,7 +45,7 @@ body {
     color: #60a5fa;
 }
 
-/* ================ RESPONSIVE FIX ================ */
+/* ================= RESPONSIVE NAVBAR ================= */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -59,22 +60,24 @@ body {
     }
 }
 
-/* ================= HEADER ================= */
+/* ================= ABOUT HEADER ================= */
 .about-header {
-    padding: 120px 20px 40px 20px; /* space for sticky navbar */
+    padding: 80px 20px 40px 20px; /* smaller top padding to fit page */
     text-align: center;
 }
 
 .about-header h1 {
-    font-size: 36px;
+    font-size: 2rem; /* matches style from your navbar snippet */
     margin-bottom: 10px;
+    color: #000; /* dark header text for white background */
+    font-weight: bold;
 }
 
-/* ================= CONTENT SECTION ================= */
+/* ================= ABOUT CONTENT ================= */
 .about-section {
     display: flex;
     justify-content: center;
-    padding: 40px 20px 80px 20px;
+    padding: 40px 20px 60px 20px; /* smaller bottom padding to fit page */
 }
 
 .about-content {
@@ -87,11 +90,8 @@ body {
 .about-content h2 {
     margin-top: 40px;
     margin-bottom: 15px;
-    font-size: 24px;
-}
-
-.about-content p {
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .about-content p {
