@@ -18,6 +18,8 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     box-sizing: border-box;
+    position: relative; /* needed for dropdown */
+    z-index: 100;
 }
 
 .nav-logo {
@@ -25,6 +27,7 @@ body {
     font-weight: bold;
     color: #fff !important; /* force white even if other CSS overrides */
 }
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -33,6 +36,7 @@ body {
     padding: 0;
 }
 
+/* Nav links */
 .nav-links a {
     text-decoration: none;
     color: white;
@@ -42,6 +46,44 @@ body {
 
 .nav-links a:hover {
     color: #60a5fa;
+}
+
+/* ================= DROPDOWN ================= */
+.nav-links li.dropdown {
+    position: relative; /* needed for absolute dropdown */
+}
+
+.nav-links li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* below parent menu item */
+    left: 0;
+    background-color: #000; /* black dropdown */
+    min-width: 180px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    list-style: none; /* remove bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li .dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff; /* white text */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links li .dropdown-content li a:hover {
+    background-color: #111; /* subtle dark hover */
+    color: #60a5fa;         /* highlight on hover */
+}
+
+/* Show dropdown on hover */
+.nav-links li.dropdown:hover > .dropdown-content {
+    display: block;
 }
 
 /* ================= RESPONSIVE NAVBAR ================= */
@@ -57,18 +99,27 @@ body {
         gap: 15px;
         width: 100%;
     }
+
+    .nav-links li .dropdown-content {
+        position: relative; /* stack under parent menu */
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        border: none;
+        width: 100%;
+    }
 }
 
 /* ================= ABOUT HEADER ================= */
 .about-header {
-    padding: 80px 20px 40px 20px; /* smaller top padding to fit page */
+    padding: 80px 20px 40px 20px; 
     text-align: center;
 }
 
 .about-header h1 {
-    font-size: 2rem; /* matches style from your navbar snippet */
+    font-size: 2rem; 
     margin-bottom: 10px;
-    color: #000; /* dark header text for white background */
+    color: #000;
     font-weight: bold;
 }
 
@@ -76,7 +127,7 @@ body {
 .about-section {
     display: flex;
     justify-content: center;
-    padding: 40px 20px 60px 20px; /* smaller bottom padding to fit page */
+    padding: 40px 20px 60px 20px;
 }
 
 .about-content {
