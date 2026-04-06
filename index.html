@@ -9,10 +9,8 @@
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
 <nav class="navbar">
     <div class="logo">Astrology Site</div>
-
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -20,40 +18,28 @@
     </ul>
 </nav>
 
-
-<!-- ================= HERO SECTION ================= -->
 <header class="hero">
-
     <h1>Celestial Guide</h1>
-
     <h2 class="subtitle">Discover the cosmos within you</h2>
-
     <p class="hero-text">
         Astrology is an ancient practice that studies the movements and positions 
         of celestial objects as a means for divining information about human affairs 
-        and terrestrial events. Its a profound tool for self-discovery and understanding 
+        and terrestrial events. It's a profound tool for self-discovery and understanding 
         the intricate dance between the universe and our individual lives.
     </p>
-
     <p class="hero-text">
         Explore the various facets of astrology — from the characteristics of the twelve 
         zodiac signs to the influence of planets and the significance of houses in your 
         birth chart. Unravel the mysteries of your personality and life path through the 
         wisdom of the stars.
     </p>
-
 </header>
 
-
-<!-- ================= HOROSCOPE GENERATOR ================= -->
 <section class="horoscope-section">
-
     <h2>Daily Horoscope Generator</h2>
 
-    <form class="horoscope-form">
-        <input type="date" required>
-
-        <select required>
+    <form class="horoscope-form" id="horoscopeForm">
+        <select id="zodiacSign" required>
             <option value="">Select Zodiac Sign</option>
             <option>Aries</option>
             <option>Taurus</option>
@@ -72,17 +58,13 @@
         <button type="submit">Generate Horoscope</button>
     </form>
 
-    <div class="horoscope-result">
+    <div class="horoscope-result" id="horoscopeResult">
         Your horoscope will appear here...
     </div>
-
 </section>
 
-<!-- ================= CATEGORY CARDS ================= -->
 <section class="categories-section">
-
     <h2 class="section-title">Explore Astrology Topics</h2>
-
     <div class="categories">
         <div class="card">
             <h3>12 Zodiac Signs</h3>
@@ -91,10 +73,10 @@
         </div>
 
         <div class="card">
-    <h3>Planets</h3>
-    <p>Understand the influence and meaning of each planet in your astrological chart.</p>
-    <a href="planets.html" class="btn">Learn More</a>
-</div>
+            <h3>Planets</h3>
+            <p>Understand the influence and meaning of each planet in your astrological chart.</p>
+            <a href="planets.html" class="btn">Learn More</a>
+        </div>
 
         <div class="card">
             <h3>Houses</h3>
@@ -102,10 +84,40 @@
             <a href="houses.html" class="btn">Learn More</a>
         </div>
     </div>
-
 </section>
 
-</section>
+<script>
+    const messages = {
+        Aries: "Today is a great day to take initiative.",
+        Taurus: "Focus on stability and comfort today.",
+        Gemini: "Communication will open new doors.",
+        Cancer: "Trust your emotions and intuition.",
+        Leo: "Shine bright and lead with confidence.",
+        Virgo: "Attention to detail will pay off.",
+        Libra: "Seek balance in your decisions.",
+        Scorpio: "Embrace transformation and growth.",
+        Sagittarius: "Adventure is calling you today.",
+        Capricorn: "Hard work will bring success.",
+        Aquarius: "Innovation will guide you forward.",
+        Pisces: "Creativity and dreams are strong today."
+    };
+
+    const form = document.getElementById('horoscopeForm');
+    const resultDiv = document.getElementById('horoscopeResult');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const sign = document.getElementById('zodiacSign').value;
+        if(sign && messages[sign]){
+            resultDiv.textContent = messages[sign];
+        } else {
+            resultDiv.textContent = "Please select a zodiac sign.";
+        }
+    });
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
