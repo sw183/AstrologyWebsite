@@ -20,7 +20,7 @@ body {
     box-sizing: border-box;
 }
 
-.logo {
+.nav-logo {
     font-size: 1.4rem;
     font-weight: bold;
     color: #fff !important; /* force white even if other CSS overrides */
