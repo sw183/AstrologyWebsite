@@ -1,60 +1,132 @@
+/* ================= BODY ================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff; /* or your space background if desired */
+    color: #222;
+    box-sizing: border-box;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* black navbar */
+    padding: 15px 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+/* ================= DROPDOWN ================= */
+.nav-links li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    min-width: 220px; /* fit longer items */
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.1);
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li .dropdown-content li {
+    list-style: none;
+}
+
+.nav-links li .dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.nav-links li .dropdown-content li a:hover {
+    background-color: #111;
+    color: #60a5fa;
+}
+
+.nav-links li:hover > .dropdown-content {
+    display: block;
+}
+
 /* ================= CONTACT SECTION ================= */
 .contact-section {
     display: flex;
+    justify-content: center;
+    padding: 40px 20px 80px 20px;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px 80px 20px;
-    text-align: center; /* center the header and form */
-    gap: 30px; /* space between header and form */
 }
 
-/* Header above form */
+/* Cosmos heading */
 .contact-section h2 {
-    font-size: 2rem;         /* smaller and balanced */
-    font-weight: 700;
-    margin: 0;
-    color: #000;             /* black text */
+    font-size: 1.8rem; /* smaller, more appropriate */
+    margin-bottom: 25px;
+    text-align: center; /* align with form */
+    font-weight: bold;
 }
 
-/* Contact form container */
+/* Contact form */
 .contact-form {
     max-width: 600px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: left;       /* form inputs aligned left */
 }
 
-/* Input fields and textarea */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px 15px;     /* slightly smaller for better proportion */
-    font-size: 1rem;        /* adjusted size */
+    padding: 15px 20px;
+    font-size: 1.1rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     resize: vertical;
     box-sizing: border-box;
 }
 
-/* Textarea specific */
 .contact-form textarea {
-    min-height: 180px;      /* slightly shorter */
+    min-height: 200px;
 }
 
-/* Focus state */
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: #60a5fa;
 }
 
-/* Submit button with pop of color */
 .contact-form button {
     padding: 15px 20px;
     font-size: 1.1rem;
-    background-color: #60a5fa; /* bright blue pop */
+    background-color: #60a5fa; /* pop color */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -64,23 +136,39 @@
 }
 
 .contact-form button:hover {
-    background-color: #2563eb; /* darker blue on hover */
+    background-color: #1e40af; /* darker blue hover */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li .dropdown-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .nav-links li .dropdown-content li a {
+        padding: 12px 20px;
+    }
+
     .contact-section h2 {
-        font-size: 1.6rem; /* smaller on mobile */
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 0.95rem;
-        padding: 10px 12px;
-    }
-
-    .contact-form button {
-        font-size: 1rem;
-        padding: 12px 15px;
+        font-size: 1.6rem;
     }
 }
