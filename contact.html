@@ -3,43 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact | Celestial Guide</title>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
 </head>
-
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">Celestial Guide</div>
     <ul class="nav-links">
         <li class="dropdown">
-            <a href="javascript:void(0)">Menu &#9662;</a> <!-- ▼ arrow -->
+            <a href="javascript:void(0)">Menu &#9662;</a>
             <ul class="dropdown-content">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="planets.html">Planets</a></li>
                 <li><a href="houses.html">Houses</a></li>
-                <li><a href="signs.html">The 12 Signs</a></li>                
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </li>
     </ul>
 </nav>
 
-<!-- ================= CONTACT SECTION ================= -->
-<section class="contact-section">
-    <div class="contact-box">
-        <h1>Contact Us</h1>
-        <p>Have questions about the cosmos? Send us a message below.</p>
+<!-- HEADER -->
+<section class="contact-header">
+    <h1>Have questions about the cosmos? Send us a message below.</h1>
+</section>
 
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+<!-- CONTACT FORM -->
+<section class="contact-section">
+    <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="8" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
 </body>
