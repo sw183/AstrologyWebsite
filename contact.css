@@ -80,15 +80,24 @@ body {
     padding: 40px 20px 80px 20px;
 }
 
-/* Mini “Cosmos” title */
+/* Main heading */
+.contact-section h1 {
+    font-size: 2rem;             /* main heading */
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Mini “Cosmos” subtitle aligned with form */
 .contact-section h2 {
-    font-size: 1.1rem;          /* small, like a mini-title */
+    font-size: 1.1rem;           /* mini-title */
     font-weight: 600;
-    color: #222;                /* darker text */
-    text-align: left;           /* align with contact form */
-    width: 100%;                /* same width as contact form */
-    max-width: 600px;           /* match form width */
-    margin-bottom: 12px;        /* spacing above form */
+    color: #222;                
+    text-align: left;             /* aligns with form */
+    width: 100%;                  
+    max-width: 600px;             /* same width as form */
+    margin-bottom: 12px;        
 }
 
 /* Contact form */
@@ -166,14 +175,38 @@ body {
         padding: 12px 20px;
     }
 
+    .contact-section h1 {
+        font-size: 1.6rem;
+    }
+
     .contact-section h2 {
-        font-size: 1rem;           /* responsive mini-title */
-        max-width: 100%;           /* match form width on mobile */
+        font-size: 1rem;          
+        max-width: 100%;          
     }
 
     .contact-form input,
     .contact-form textarea,
     .contact-form button {
         font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 30px 10px 60px 10px;
+    }
+
+    .contact-section h1 {
+        font-size: 1.4rem;
+    }
+
+    .contact-section h2 {
+        font-size: 0.95rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 0.9rem;
     }
 }
