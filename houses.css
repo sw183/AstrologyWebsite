@@ -1,34 +1,36 @@
 /* ================= GENERAL PAGE STYLING ================= */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
     text-align: center;
-    color: black;
+    color: #222;
+    box-sizing: border-box;
 }
 
 /* ================= NAVBAR ================= */
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    padding: 15px 30px;
+    padding: 20px 60px;         /* match About/Contact pages */
+    background-color: #000;      /* solid black */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
-    color: white;
-    font-size: 20px;
+    font-size: 1.4rem;
     font-weight: bold;
+    color: #fff;                /* white logo text */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 30px;                  /* consistent spacing */
     margin: 0;
     padding: 0;
 }
@@ -36,26 +38,40 @@ body {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #60a5fa;             /* consistent hover color */
+}
+
+/* ================= RESPONSIVE NAVBAR ================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
 }
 
 /* ================= PAGE HEADER ================= */
-
 .planet-header {
     padding: 40px 20px;
 }
 
 .planet-header h1 {
-    font-size: 32px;
+    font-size: 2rem;           /* match About page header style */
     margin-bottom: 20px;
 }
 
 /* ================= GRID LAYOUT ================= */
-
 .house-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -64,8 +80,22 @@ body {
 }
 
 /* ================= CARD STYLING ================= */
-
 .house-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.house-card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.house-card h3 {
+    margin: 10px 0 15px 0;
+    font-weight: 600;
+}
     padding: 25px 20px;
     border-radius: 12px;
     color: white;
