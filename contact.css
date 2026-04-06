@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fff; /* or your space background if desired */
+    background-color: #fff; 
     color: #222;
     box-sizing: border-box;
 }
@@ -13,21 +13,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000; /* solid black navbar */
-    padding: 15px 30px;
+    background-color: #000; 
+    padding: 20px 60px; 
     position: relative;
     z-index: 100;
 }
 
 .nav-logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #fff;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px; /* match spacing from other pages */
+    gap: 30px; 
     list-style: none;
     margin: 0;
     padding: 0;
@@ -37,14 +37,14 @@ body {
     position: relative;
 }
 
-/* ================= DROPDOWN ================= */
+/* ================= DROPDOWN MENU ================= */
 .nav-links li .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #000; /* solid black */
-    min-width: 180px;       /* match other pages */
+    background-color: #000; 
+    min-width: 180px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
@@ -63,8 +63,8 @@ body {
 }
 
 .nav-links li .dropdown-content li a:hover {
-    background-color: #111; /* subtle hover background */
-    color: #60a5fa;         /* same blue hover as other pages */
+    background-color: #111;
+    color: #60a5fa;
 }
 
 .nav-links li:hover > .dropdown-content {
@@ -74,24 +74,27 @@ body {
 /* ================= CONTACT SECTION ================= */
 .contact-section {
     display: flex;
-    justify-content: center;
-    padding: 40px 20px 80px 20px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 40px 20px 80px 20px;
 }
 
-/* Cosmos heading */
+/* Mini “Cosmos” title */
 .contact-section h2 {
-    font-size: 1.5rem; /* smaller, aligned with form */
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
+    font-size: 1.1rem;          /* small, like a mini-title */
+    font-weight: 600;
+    color: #222;                /* darker text */
+    text-align: left;           /* align with contact form */
+    width: 100%;                /* same width as contact form */
+    max-width: 600px;           /* match form width */
+    margin-bottom: 12px;        /* spacing above form */
 }
 
 /* Contact form */
 .contact-form {
-    max-width: 600px;
     width: 100%;
+    max-width: 600px; 
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -100,8 +103,8 @@ body {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 15px 20px;
-    font-size: 1rem; /* slightly smaller for consistency */
+    padding: 14px 18px;
+    font-size: 1rem; 
     border: 1px solid #ccc;
     border-radius: 8px;
     resize: vertical;
@@ -119,8 +122,8 @@ body {
 }
 
 .contact-form button {
-    padding: 15px 20px;
-    font-size: 1rem; /* smaller and consistent */
+    padding: 14px 18px;
+    font-size: 1rem; 
     background-color: #60a5fa;
     color: #fff;
     border: none;
@@ -164,7 +167,8 @@ body {
     }
 
     .contact-section h2 {
-        font-size: 1.4rem;
+        font-size: 1rem;           /* responsive mini-title */
+        max-width: 100%;           /* match form width on mobile */
     }
 
     .contact-form input,
