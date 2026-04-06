@@ -134,3 +134,56 @@ body {
 .house10 { background-color: #f06595; }
 .house11 { background-color: #adb5bd; color: black; }
 .house12 { background-color: #b50505; }
+
+/* Dropdown styling */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* dropdown appears below Menu */
+    right: 0;
+    background-color: #000;
+    min-width: 150px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.nav-links .dropdown-content li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links .dropdown-content a:hover {
+    background-color: #111;
+    color: #60a5fa;
+}
+
+/* Show dropdown on hover */
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links .dropdown-content {
+        position: static;
+        border: none;
+        border-radius: 0;
+    }
+}
