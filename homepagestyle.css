@@ -1,273 +1,90 @@
-/* ================= RESET ================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family: Arial, sans-serif;
-    color: white;
-
-    background-color: #050a18;
-
-    background-image:
-        /* tiny stars */
-        radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.6), transparent),
-        radial-gradient(1px 1px at 50px 80px, rgba(255,255,255,0.5), transparent),
-        radial-gradient(1px 1px at 130px 40px, rgba(255,255,255,0.6), transparent),
-        radial-gradient(1px 1px at 170px 120px, rgba(255,255,255,0.5), transparent),
-
-        /* medium stars */
-        radial-gradient(2px 2px at 90px 60px, rgba(255,255,255,0.8), transparent),
-        radial-gradient(2px 2px at 200px 150px, rgba(255,255,255,0.7), transparent),
-
-        /* big bright stars */
-        radial-gradient(3px 3px at 300px 100px, rgba(255,255,255,0.95), transparent),
-        radial-gradient(3px 3px at 400px 200px, rgba(255,255,255,0.9), transparent);
-
-    background-size: 350px 350px;
-    background-repeat: repeat;
-}
-
-/* ================= CONTAINER (CONSISTENT WIDTH) ================= */
-.container{
-    max-width:1100px;
-    margin:0 auto;
-    padding:0 20px;
-}
-
 /* ================= NAVBAR ================= */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:rgba(11, 26, 53, 0.9);
-    border-bottom:1px solid rgba(255,255,255,0.1);
-    backdrop-filter:blur(6px);
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* black navbar */
+    padding: 15px 30px;
+    position: relative; /* needed for dropdowns */
+    z-index: 100;
 }
 
-.logo{
-    font-size:1.4rem;
-    font-weight:bold;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:30px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    transition:0.3s ease;
-}
-
-.nav-links a:hover{
-    color:#60a5fa;
-}
-
-/* ================= HERO ================= */
-.hero{
-    text-align:center;
-    padding:100px 20px;
-    max-width:900px;
-    margin:0 auto;
-}
-
-.hero h1{
-    font-size:3rem;
-    margin-bottom:15px;
-}
-
-.subtitle{
-    font-weight:normal;
-    margin-bottom:25px;
-    color:#93c5fd;
-}
-
-.hero-text{
-    line-height:1.7;
-    margin-bottom:18px;
-    opacity:0.9;
-}
-
-/* ================= HOROSCOPE ================= */
-.horoscope-section{
-    text-align:center;
-    padding:80px 20px;
-}
-
-.horoscope-form{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    margin-top:25px;
-    flex-wrap:wrap;
-}
-
-input, select, button{
-    padding:12px 14px;
-    border:none;
-    border-radius:6px;
-    font-size:0.95rem;
-}
-
-button{
-    background:#2563eb;
-    color:white;
-    cursor:pointer;
-    transition:0.3s ease;
-}
-
-button:hover{
-    background:#1d4ed8;
-    transform:scale(1.05);
-}
-
-.horoscope-result{
-    margin-top:25px;
-    font-style:italic;
-    opacity:0.85;
-}
-
-/* ================= CATEGORY SECTION ================= */
-.categories-section{
-    padding:80px 20px;
-    text-align:center;
-}
-
-.section-title{
-    margin-bottom:45px;
-    font-size:1.8rem;
-}
-
-.categories{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-    max-width:1100px;
-    margin:0 auto;
-}
-
-.card{
-    background:#0b1a35;
-    padding:30px;
-    border-radius:14px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card h3{
-    margin-bottom:15px;
-}
-
-.card p{
-    opacity:0.85;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.6);
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 20px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    transition:0.3s ease;
-}
-
-.btn:hover{
-    background:#1d4ed8;
-    transform:scale(1.05);
-}
-
-/* ================= INFO SECTION ================= */
-.info{
-    text-align:center;
-    padding:60px 20px;
-    max-width:900px;
-    margin:auto;
-    opacity:0.9;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width:900px){
-
-    .navbar{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .hero h1{
-        font-size:2.3rem;
-    }
-
-    .horoscope-form{
-        flex-direction:column;
-        align-items:center;
-    }
-
-}
-
-/* Dropdown styling */
-.nav-links .dropdown {
-    position: relative;
-}
-
-.nav-links .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%; /* dropdown appears below Menu */
-    right: 0;
-    background-color: #000;
-    min-width: 150px;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-.nav-links .dropdown-content li {
+/* Nav links container */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.nav-links .dropdown-content a {
-    display: block;
-    padding: 10px 15px;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
+/* Individual nav items */
+.nav-links li {
+    position: relative;
 }
 
-.nav-links .dropdown-content a:hover {
+/* Dropdown styling */
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* dropdown appears below parent */
+    left: 0;
+    background-color: #000; /* black dropdown */
+    min-width: 180px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    list-style: none; /* remove bullets */
+    padding: 0;
+    margin: 0;
+}
+
+/* Dropdown links */
+.nav-links .dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff; /* white text */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Hover effect */
+.nav-links .dropdown-content li a:hover {
     background-color: #111;
-    color: #60a5fa;
+    color: #60a5fa; /* subtle highlight on hover */
 }
 
 /* Show dropdown on hover */
-.nav-links .dropdown:hover .dropdown-content {
+.nav-links li:hover > .dropdown-content {
     display: block;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .nav-links {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
     }
 
     .nav-links .dropdown-content {
-        position: static;
+        position: relative; /* stack naturally on mobile */
+        top: 0;
+        left: 0;
         border: none;
         border-radius: 0;
+        width: 100%;
+    }
+
+    .nav-links .dropdown-content li a {
+        padding: 12px 20px;
     }
 }
