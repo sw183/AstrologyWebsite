@@ -29,94 +29,108 @@ img{
 }
 
 /* ================= NAVBAR ================= */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 80px;
-    background:rgba(11,26,53,0.9);
-    border-bottom:1px solid rgba(255,255,255,0.1);
-    backdrop-filter:blur(6px);
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+    background-color: #000;               /* solid black to match other pages */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.logo{
-    font-size:2rem;
-    font-weight:bold;
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;                           /* white logo text */
 }
 
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:40px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links li{
-    position:relative;
+.nav-links li {
+    position: relative;                   /* for dropdown positioning */
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    font-size:1rem;
-    padding:10px 15px;
-    transition:0.3s ease;
+.nav-links a {
+    text-decoration: none;
+    color: white;                          /* white links */
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover{
-    color:#60a5fa;
+.nav-links a:hover {
+    color: #60a5fa;                        /* same hover color as other pages */
 }
 
 /* ================= DROPDOWN MENU ================= */
-.dropdown-menu{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:rgba(11,26,53,0.95);
-    list-style:none;
-    padding:10px 0;
-    min-width:180px;
-    border-radius:6px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.5);
-    z-index:1000;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;                /* solid black to match navbar */
+    list-style: none;
+    padding: 10px 0;
+    min-width: 180px;
+    border-radius: 4px;                    /* subtle rounded corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    z-index: 1000;
 }
 
-.dropdown-menu li a{
-    display:block;
-    padding:10px 20px;
-    font-size:0.95rem;
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1rem;                       /* match main nav link size */
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.nav-links li:hover .dropdown-menu{
-    display:block;
+.dropdown-menu li a:hover {
+    color: #60a5fa;                        /* same hover color as other pages */
+}
+
+.nav-links li:hover .dropdown-menu {
+    display: block;                         /* show dropdown on hover */
 }
 
 /* ================= HERO ================= */
-.hero{
-    text-align:center;
-    padding:150px 20px;
-    max-width:1000px;
-    margin:0 auto;
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.hero h1{
-    font-size:4rem;
-    margin-bottom:20px;
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: white;
 }
 
-.subtitle{
-    font-weight:normal;
-    margin-bottom:30px;
-    color:#93c5fd;
-    font-size:1.5rem;
+.subtitle {
+    font-weight: normal;
+    margin-bottom: 30px;
+    color: #93c5fd;
+    font-size: 1.5rem;
 }
 
-.hero-text{
-    line-height:1.8;
-    margin-bottom:25px;
-    opacity:0.9;
-    font-size:1.1rem;
+.hero-text {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    color: white;
 }
 
 /* ================= HOROSCOPE ================= */
