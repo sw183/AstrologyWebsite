@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000; /* black navbar */
+    background-color: #000; /* solid black navbar */
     padding: 15px 30px;
     position: relative;
     z-index: 100;
@@ -27,7 +27,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 30px; /* match spacing from other pages */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -43,33 +43,28 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #000;
-    min-width: 220px; /* fit longer items */
-    border-radius: 5px;
-    border: 1px solid rgba(255,255,255,0.1);
+    background-color: #000; /* solid black */
+    min-width: 180px;       /* match other pages */
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.nav-links li .dropdown-content li {
-    list-style: none;
-}
-
 .nav-links li .dropdown-content li a {
     display: block;
-    padding: 10px 15px;
+    padding: 10px 20px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    white-space: nowrap;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-links li .dropdown-content li a:hover {
-    background-color: #111;
-    color: #60a5fa;
+    background-color: #111; /* subtle hover background */
+    color: #60a5fa;         /* same blue hover as other pages */
 }
 
 .nav-links li:hover > .dropdown-content {
@@ -87,9 +82,9 @@ body {
 
 /* Cosmos heading */
 .contact-section h2 {
-    font-size: 1.8rem; /* smaller, more appropriate */
-    margin-bottom: 25px;
-    text-align: center; /* align with form */
+    font-size: 1.5rem; /* smaller, aligned with form */
+    margin-bottom: 20px;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -106,7 +101,7 @@ body {
 .contact-form textarea {
     width: 100%;
     padding: 15px 20px;
-    font-size: 1.1rem;
+    font-size: 1rem; /* slightly smaller for consistency */
     border: 1px solid #ccc;
     border-radius: 8px;
     resize: vertical;
@@ -125,8 +120,8 @@ body {
 
 .contact-form button {
     padding: 15px 20px;
-    font-size: 1.1rem;
-    background-color: #60a5fa; /* pop color */
+    font-size: 1rem; /* smaller and consistent */
+    background-color: #60a5fa;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -136,7 +131,7 @@ body {
 }
 
 .contact-form button:hover {
-    background-color: #1e40af; /* darker blue hover */
+    background-color: #1e40af;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -169,6 +164,12 @@ body {
     }
 
     .contact-section h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 0.95rem;
     }
 }
