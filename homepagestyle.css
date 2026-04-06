@@ -86,11 +86,15 @@ img{
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 5px;
     z-index: 1000;
+    list-style: none;       /* REMOVE bullets here */
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links .dropdown-content li {
     margin: 0;
     padding: 0;
+    list-style: none;       /* REMOVE bullets from each li */
 }
 
 .nav-links .dropdown-content a {
