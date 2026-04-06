@@ -33,8 +33,8 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 80px;
-    background-color: #000;               /* solid black to match other pages */
+    padding: 20px 60px;
+    background-color: #000;             
     border-bottom: 1px solid rgba(255,255,255,0.1);
     width: 100%;
     box-sizing: border-box;
@@ -43,7 +43,7 @@ img{
 .logo {
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;                           /* white logo text */
+    color: #fff;
 }
 
 .nav-links {
@@ -55,12 +55,12 @@ img{
 }
 
 .nav-links li {
-    position: relative;                   /* for dropdown positioning */
+    position: relative;  
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;                          /* white links */
+    color: white;  
     font-weight: 600;
     font-size: 1rem;
     padding: 10px 15px;
@@ -68,68 +68,75 @@ img{
 }
 
 .nav-links a:hover {
-    color: #60a5fa;                        /* same hover color as other pages */
+    color: #60a5fa; 
 }
 
 /* ================= DROPDOWN MENU ================= */
-.dropdown-menu {
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #000;                /* solid black to match navbar */
-    list-style: none;
-    padding: 10px 0;
-    min-width: 180px;
-    border-radius: 4px;                    /* subtle rounded corners */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    top: 100%; 
+    right: 0;
+    background-color: #000; 
+    min-width: 150px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 5px;
     z-index: 1000;
 }
 
-.dropdown-menu li a {
+.nav-links .dropdown-content li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links .dropdown-content a {
     display: block;
-    padding: 10px 20px;
-    font-size: 1rem;                       /* match main nav link size */
-    color: white;
+    padding: 10px 15px;
+    color: #fff;
     font-weight: 600;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: 0.3s ease;
 }
 
-.dropdown-menu li a:hover {
-    color: #60a5fa;                        /* same hover color as other pages */
+.nav-links .dropdown-content a:hover {
+    background-color: #111;
+    color: #60a5fa; 
 }
 
-.nav-links li:hover .dropdown-menu {
-    display: block;                         /* show dropdown on hover */
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* ================= HERO ================= */
 .hero {
     text-align: center;
-    padding: 150px 20px;
+    padding: 120px 20px; /* slightly smaller for balance with navbar */
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;   /* slightly smaller than previous 4rem */
     margin-bottom: 20px;
     color: white;
 }
 
 .subtitle {
     font-weight: normal;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: #93c5fd;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .hero-text {
     line-height: 1.8;
     margin-bottom: 25px;
     opacity: 0.9;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: white;
 }
 
@@ -144,6 +151,7 @@ img{
     gap:20px;
     justify-content:center;
     margin-top:30px;
+    flex-wrap: wrap;
 }
 
 input, select, button{
@@ -231,4 +239,66 @@ button:hover{
 .btn:hover{
     background:#1d4ed8;
     transform:scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links .dropdown-content {
+        position: static;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .nav-links .dropdown-content a {
+        padding: 12px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-text {
+        font-size: 0.95rem;
+    }
+
+    .categories {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+    }
 }
