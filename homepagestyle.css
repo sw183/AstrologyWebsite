@@ -3,9 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000; /* black navbar */
+    background-color: #000;
     padding: 15px 30px;
-    position: relative; /* needed for dropdowns */
+    position: relative; 
     z-index: 100;
 }
 
@@ -24,13 +24,13 @@
 }
 
 /* Dropdown styling */
-.nav-links .dropdown-content {
+.nav-links li .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%; /* dropdown appears below parent */
+    top: 100%; 
     left: 0;
-    background-color: #000; /* black dropdown */
-    min-width: 180px;
+    background-color: #000;
+    min-width: 220px; /* increase to fit content */
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
@@ -39,19 +39,25 @@
     margin: 0;
 }
 
+/* Remove bullets from li inside dropdown */
+.nav-links li .dropdown-content li {
+    list-style: none;
+}
+
 /* Dropdown links */
-.nav-links .dropdown-content li a {
+.nav-links li .dropdown-content li a {
     display: block;
     padding: 10px 15px;
-    color: #fff; /* white text */
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
+    white-space: nowrap; /* prevent wrapping */
 }
 
 /* Hover effect */
-.nav-links .dropdown-content li a:hover {
+.nav-links li .dropdown-content li a:hover {
     background-color: #111;
-    color: #60a5fa; /* subtle highlight on hover */
+    color: #60a5fa; 
 }
 
 /* Show dropdown on hover */
@@ -75,8 +81,8 @@
         width: 100%;
     }
 
-    .nav-links .dropdown-content {
-        position: relative; /* stack naturally on mobile */
+    .nav-links li .dropdown-content {
+        position: relative;
         top: 0;
         left: 0;
         border: none;
@@ -84,7 +90,7 @@
         width: 100%;
     }
 
-    .nav-links .dropdown-content li a {
+    .nav-links li .dropdown-content li a {
         padding: 12px 20px;
     }
 }
