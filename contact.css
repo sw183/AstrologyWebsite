@@ -1,42 +1,60 @@
+/* ================= CONTACT SECTION ================= */
 .contact-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 40px 20px 80px 20px;
+    text-align: center; /* center the header and form */
+    gap: 30px; /* space between header and form */
 }
 
+/* Header above form */
+.contact-section h2 {
+    font-size: 2rem;         /* smaller and balanced */
+    font-weight: 700;
+    margin: 0;
+    color: #000;             /* black text */
+}
+
+/* Contact form container */
 .contact-form {
-    max-width: 600px;      /* maximum form width */
-    width: 100%;           /* take full available width */
+    max-width: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;             /* spacing between fields */
+    gap: 20px;
+    text-align: left;       /* form inputs aligned left */
 }
 
+/* Input fields and textarea */
 .contact-form input,
 .contact-form textarea {
-    width: 100%;           /* make boxes full width */
-    padding: 15px 20px;    /* inner padding */
-    font-size: 1.1rem;     /* slightly larger text */
+    width: 100%;
+    padding: 12px 15px;     /* slightly smaller for better proportion */
+    font-size: 1rem;        /* adjusted size */
     border: 1px solid #ccc;
     border-radius: 8px;
-    resize: vertical;      /* allow textarea to expand vertically */
-    box-sizing: border-box; /* include padding in width */
+    resize: vertical;
+    box-sizing: border-box;
 }
 
+/* Textarea specific */
 .contact-form textarea {
-    min-height: 200px;      /* make the message box taller */
+    min-height: 180px;      /* slightly shorter */
 }
 
+/* Focus state */
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: #60a5fa;
 }
 
+/* Submit button with pop of color */
 .contact-form button {
     padding: 15px 20px;
     font-size: 1.1rem;
-    background-color: #000;
+    background-color: #60a5fa; /* bright blue pop */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -46,5 +64,23 @@
 }
 
 .contact-form button:hover {
-    background-color: #111;
+    background-color: #2563eb; /* darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section h2 {
+        font-size: 1.6rem; /* smaller on mobile */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
 }
