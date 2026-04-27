@@ -119,20 +119,20 @@ const messages = {
     
     Pisces: "Your imagination and intuition are especially strong today. Creative outlets or quiet reflection could bring meaningful insights. Be mindful of your energy, though—protect your peace and avoid situations that feel draining."
 };
-</script>
 
-    const form = document.getElementById('horoscopeForm');
-    const resultDiv = document.getElementById('horoscopeResult');
+const form = document.getElementById('horoscopeForm');
+const resultDiv = document.getElementById('horoscopeResult');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const sign = document.getElementById('zodiacSign').value;
-        if(sign && messages[sign]){
-            resultDiv.textContent = messages[sign];
-        } else {
-            resultDiv.textContent = "Please select a zodiac sign.";
-        }
-    });
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const sign = document.getElementById('zodiacSign').value;
+
+    if (sign && messages[sign]) {
+        resultDiv.textContent = messages[sign];
+    } else {
+        resultDiv.textContent = "Please select a zodiac sign.";
+    }
+});
 </script>
 
 </body>
