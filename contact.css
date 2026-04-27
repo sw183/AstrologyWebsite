@@ -37,22 +37,38 @@ body {
     position: relative;
 }
 
+/* ✅ FIX: Prevent "Menu" dropdown link from turning blue */
+.nav-links .dropdown > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links .dropdown > a:visited {
+    color: #fff;
+}
+
+.nav-links .dropdown > a:focus,
+.nav-links .dropdown > a:active {
+    color: #fff;
+    outline: none;
+}
+
 /* ================= DROPDOWN MENU ================= */
 .nav-links .dropdown {
-    position: relative; /* parent li for dropdown */
+    position: relative;
 }
 
 .nav-links .dropdown-content {
     display: none;
     position: absolute;
     top: 100%; 
-    left: 0; /* align left with parent */
+    left: 0;
     background-color: #000; 
     min-width: 180px;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
-    list-style: none; /* removes bullets */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -60,7 +76,7 @@ body {
 .nav-links .dropdown-content li {
     margin: 0;
     padding: 0;
-    list-style: none; /* just in case */
+    list-style: none;
 }
 
 .nav-links .dropdown-content li a {
@@ -79,7 +95,7 @@ body {
 }
 
 .nav-links .dropdown:hover .dropdown-content {
-    display: block; /* show dropdown on hover */
+    display: block;
 }
 
 /* Responsive adjustments for dropdown */
@@ -112,27 +128,24 @@ body {
     padding: 40px 20px 80px 20px;
 }
 
-/* Main heading */
 .contact-section h1 {
-    font-size: 2rem;             /* main heading */
+    font-size: 2rem;
     font-weight: bold;
     color: #222;
     text-align: center;
     margin-bottom: 15px;
 }
 
-/* Mini “Cosmos” subtitle aligned with form */
 .contact-section h2 {
-    font-size: 1.1rem;           /* mini-title */
+    font-size: 1.1rem;
     font-weight: 600;
-    color: #222;                
-    text-align: left;             /* aligns with form */
-    width: 100%;                  
-    max-width: 600px;             /* same width as form */
-    margin-bottom: 12px;        
+    color: #222;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 12px;
 }
 
-/* Contact form */
 .contact-form {
     width: 100%;
     max-width: 600px; 
